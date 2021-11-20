@@ -1,0 +1,26 @@
+body {
+    background-color: aqua;
+}
+.container {
+    width: 800px;
+    height: 500px;
+    border: 1px solid;
+    margin: ;
+} */
+.info {
+   width: 00px;
+   height: 400px;
+   border: 1px solid;
+}
+#info_btn_1, #info_btn_2 {
+    width: 200px;
+    height: 30px;
+    margin-left: 200px;
+    background-color: chartreuse;
+    border-color: chartreuse;
+    margin-top: 200px;
+    cursor: pointer;
+    margin-right: 40px;
+
+
+} 

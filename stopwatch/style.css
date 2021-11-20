@@ -1,0 +1,10 @@
+body {
+    background-color: aquamarine;
+}
+table {
+    border: 1px solid;
+    padding: 30px 30px;
+    border-width: 500px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Mashinalar Royhati:</p>
+    <ol>
+        <li>Neksiya</li>
+        <li>Tiko</li>
+        <li>Damas</li>
+        <li>Matiz</li>
+        <li>Spark</li>
+        <li>Kobalt</li>
+        <li>Lasetti</li>
+        <li>Epika</li>
+        <li>Malibu</li>
+        <li>Kaptiva</li>
+    </ol>
+    <p>Mashinalar raqamini kiritib, Tugmani cherting!</p>
+    <input type="text" id="intoUzCar" placeholder="number...">
+    <button onclick="func1()">🚘 submit </button>
+    
+    <p>Sizning tanlovingiz:
+        <label id="outUzCar" style="background-color: rgb(226, 140, 140);"></label>
+    </p>
+
+    <script>
+        function func1(){
+            let number = document.getElementById("intoUzCar").value;
+            let cars = document.getElementsByTagName("li");
+            let indexCar = number - 1;
+            let carsName = cars[indexCar];
+
+            if(carsName != null){
+                document.getElementById("outUzCar").innerHTML = carsName.innerHTML;
+            } else {
+                document.getElementById("outUzCar").innerHTML = "Mavjud bo'lamagan mashina";
+            }
+
+        }
+    </script>
+</body>
+</html>

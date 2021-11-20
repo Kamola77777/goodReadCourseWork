@@ -1,0 +1,47 @@
+body {
+    background-color: indianred;
+}
+
+.todos {
+    margin: 10px 10px 10px 25px;
+}
+button {
+    width: 150px;
+    height: 25px;
+    background-color: red;
+    border-color: red;
+    cursor: pointer;
+    margin-left: 40px;
+    font-size: 17px;
+}
+button:hover {
+    background-color: rgb(64, 233, 64);
+    width: 200px;
+    height: 35px;
+    border-radius: 18px;
+}
+.item {
+    width: 350px;
+    height: 40px;
+    border-color: antiquewhite;
+    cursor: pointer;
+    background-color: antiquewhite;
+    border-top-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.item:hover {
+    background-color: rgb(93, 223, 93);
+}
+#formss {
+    position: relative;
+    top: -421px;
+    left: 600px;
+}
+.items {
+    width: 350px;
+    height: 40px;
+    border-color: rgb(61, 120, 228);
+    cursor: pointer;
+    background-color: rgb(61, 120, 228);
+    border-radius: 15px;
+}

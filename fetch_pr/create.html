@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div class="app">
+         <div class="header">
+             <div class="title">Todo List</div>
+         </div>
+          <div class="input">
+              <input type="text" name="todo-input" id="todo-input" class="input-element"
+              placeholder="what's on">
+              <button id="add-btn" type="button" name="add-btn" class="input-btn">Add todo</button>
+          </div>
+          <div class="todo-list" id="list"></div>
+     </div>
+     <script>
+         var add_todo_btn = document.getElementById('add-btn');
+         var todo_input = document.getElementById('todo-input');
+         var list = document.getElementById('list');
+
+         add_todo_btn.addEventListener('click', function() {
+             var todo = todo_input.value;
+
+             var item = document.createElement('DIV');
+             item.classList.add('item');
+             var item_text = document.createElement('DIV');
+             item_text.classList.add('item-text');
+             item_text.textContent = todo;
+
+             var edit_input = document.createElement('INPUT');
+             edit_input.classList.add('edit-input');
+             edit_input.classList.add('hide');
+             edit_input.name = 'edit-input';
+             edit_input.type = 'text';
+             edit_input.value = todo;
+
+             var edit_input_btn = document.createElement("BUTTON");
+             edit_input_btn.textContent = 'UPDATE';
+             edit_input_btn.classList.add('action-btn');
+             edit_input_btn.classList.add('update-btn');
+             edit_input_btn.classList.add('hide');
+             edit_input_btn.type = 'button';
+            
+             var edit_btns = document.createElement('DIV');
+             edit_btns.classList.add('action-btn');
+             edit_btns.classList.add('edit-btn');
+             edit_btns.textContent = 'EDIT';
+
+             var edit_btn = document.createElement('BUTTON');
+             edit_input.classList.add('action-btn')
+             //EDIT TOOLS
+               edit_btns.addEventListener('click', function() {
+                   edit_input.classList.remove('hide');
+                   item_text.classList.add('hide');
+                   edit_input_btn.classList.remove('hide');
+                   edit_input_btn.addEventListener('click', function () {
+                       item_text.textContent = edit_input.value;
+                       edit_input.classList.add('hide');
+                       item_text.classList.remove('hide');
+                       edit_input_btn.classList.add('hide');
+
+                   })
+
+               })
+                 var remove_btn = document.createElement('BUTTON');
+                 remove_btn.classList.add('action_btn');
+                 remove_btn.classList.add('remove-btn');
+                 remove_btn.textContent = 'REMOVE';
+                 //REMOVE TODO
+
+                 remove_btn.addEventListener('click', function() {
+                     item.parentNode.replaceChild(item)
+                 });
+
+                 action_btn.append(edit_input_btn);
+                 action_btn.append(edit_btns);
+                 action_btn.append(remove_btn);
+                 item.append(item_text);
+                 item.append(edit_input);
+                 item.append(action_btns);
+                 list.append(item);
+
+                 todo_input.value = ''
+
+         })
+
+     </script>
+</body>
+</html>

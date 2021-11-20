@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todos">
+            <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">To do list</h2>
+            <h2><input type="text" name="tname" placeholder="Todo name" class="item"></h2>
+            <h2><input type="text" name="icon" placeholder="Category with icon" class="item"></h2>
+            <h2><input type="text" name="priority" placeholder="Priority" class="item"></h2>
+            <h2><input type="text" name="description" placeholder="Description" class="item"></h2>
+            <h2><input type="date" name="date" placeholder="Date" class="item"></h2>
+            <h2><input type="text" name="status" placeholder="Status" class="item"></h2>
+         
+            <button onclick="createInfo()">Create</button>
+            <button onclick="hideEl()">Remove form</button>
+            <button onclick="showEl()" >Show</button>
+        </div>
+        
+
+         <form action="" id="formss">
+            <label for="fname">Todo name:</label>
+            <div type="text" value="ghhjj" id="tname"  class="items"></div><br><br>
+            <label for="lname">Category with icon:</label>
+            <input type="text" id="icon"  class="items"><br><br>
+            <label for="lname">Priority:</label>
+            <input type="text" id="priority"  class="items"><br><br>
+            <label for="lname">Description:</label>
+            <input type="text" id="description"  class="items"><br><br>
+            <label for="lname">Date:</label>
+            <input type="text" id="date"  class="items"><br><br>
+            <label for="lname">Status :</label>
+            <input type="text" id="status" class="items"><br><br>
+          </form> 
+      
+          
+     
+    </div>
+
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

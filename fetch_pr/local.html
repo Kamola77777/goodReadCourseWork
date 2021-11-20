@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input, button {
+            padding: 7px;
+            height: 40px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h2 id="title">Local Storage</h2>
+    <fieldset>
+        <legend>Insert</legend>
+        <input id="inpKey" type="text" placeholder="key">
+        <input id="inpVal" type="text" placeholder="value">
+        <button type="button" id="btnInsert">Insert Data</button>
+    </fieldset>
+    <fieldset>
+        <legend>Local Output</legend>
+        <div id="lsOutout"></div>
+    </fieldset>
+
+    <script>
+        const inpkey = document.getElementById("inpKey");
+        const inpVal = document.getElementById("inpVal");
+        const btn = document.getElementById("btnInsert");
+        const lsOutout = document.getElementById("lsOutout");
+
+        btnInsert.onclick = function() {
+            const key = inpkey.value;
+            const value = inpVal.value;
+
+            //  
+
+            if( key && value) {
+                localStorage.setItem(key , value );
+                location.reload()
+            }
+        }
+        for(let i=0; i<localStorage.length; i++){
+            const key = localStorage.key(i)
+            const value = localStorage.getItem(key)
+
+            lsOutout.innerHTML += `${key}: ${value}<br />`
+        }
+    </script>
+</body>
+</html>

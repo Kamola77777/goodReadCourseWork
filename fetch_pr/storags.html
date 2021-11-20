@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Local Storage Tutorial</h1>
+    Enter  Key Value : <input type="text" id="take_input_key"><br>
+    Enter Data to Store in Local Storage : <input type="text" id="take_input"><br>
+    <button type="button" id="save_value">Save in Local Storage</button>
+
+    <br>
+    <label>Local Storage Value : <span id="localstorage_value"></span></label>
+    <br>
+    <button type="button" id="read_localstorage">Read Local Storage</button>
+    <br>
+    <button type="button" id="delete_data">Delete Data</button>
+    <br>
+    <button type="button" id="read_all_data">Read All Data</button>
+    
+
+    <script>
+        console.log("Page is Ready")
+var take_input=document.getElementById("take_input")
+var take_input_key=document.getElementById("take_input_key")
+var save_value=document.getElementById("save_value")
+var localstorage_value=document.getElementById("localstorage_value")
+var read_localstorage=document.getElementById("read_localstorage")
+var delete_data=document.getElementById("delete_data")
+var read_all_data=document.getElementById("read_all_data")
+
+save_value.onclick=function(){
+    localStorage.setItem(take_input_key.value,take_input.value);
+}
+
+read_localstorage.onclick=function(){
+    localstorage_value.textContent=localStorage.getItem("name");
+}
+
+delete_data.onclick=function(){
+    localStorage.removeItem("name")
+}
+
+read_all_data.onclick=function(){
+    var keys=Object.keys(localStorage);
+    console.log(keys);
+
+    for(var key of keys){
+        console.log("Key : "+key+" : Value : "+localStorage.getItem(key));
+    }
+}
+    </script>
+</body>
+</html>

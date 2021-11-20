@@ -1,0 +1,93 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+ body {
+     background-color: aliceblue;
+ }
+ .container {
+     position: absolute;
+     left: 320px;
+     top: 350px;
+     transform: translate(-50%, -50%);
+     background-color: rgb(18, 209, 50);
+     box-shadow: 0 2px 8px grey;
+     width: 550px;
+     height: 600px;
+     text-align: center;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ h1 {
+     margin: 12px 0;
+
+ }
+ .add-element {
+     margin: 12px 0;
+ }
+ input {
+     padding: 6px 4px;
+     width: 240px;
+     cursor: pointer;
+ }
+ 
+ button{
+     padding: 7px 14px;
+     background-color: red;
+     border: none;
+     border-radius: 4px;
+     color: #fafafa;
+     width: 80px;
+     cursor: pointer;
+ }
+ .element-list {
+   height: 550px;
+   overflow: auto;
+ } 
+ ul {
+     padding: 15px;
+ }
+ li {
+     list-style: none;
+     padding: 10px 5px;
+     background-color: #fff;
+     margin: 12px;
+     box-shadow: 0 2px 8px rgba(0,0,0,1);
+     border-radius: 3px;
+     transition: .4s;
+     cursor: pointer;
+ }
+ button:hover{
+     background-color: #1565c0;
+     width: 100px;
+     color: #fafafa;
+     font-size: 18px;
+
+ }
+ li:hover {
+     background-color: #d431b9;
+     color: #fafafa;
+     font-size: 20px;
+ }
+ .checked {
+     text-decoration: line-through;
+     background-color: #e0e0e0;
+ }
+ /* /////////////////////// */
+ .container-2 {
+    position: absolute;
+    right: -120px;
+    top: 350px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(18, 209, 50);
+    box-shadow: 0 2px 8px grey;
+    width: 550px;
+    height: 600px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ a {
+   text-decoration: none;
+   font-size: 18px;
+}

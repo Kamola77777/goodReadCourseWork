@@ -1,0 +1,13 @@
+ body {
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+     background-color: springgreen;
+     background-size: cover;
+ }
+ h2 {
+     font-family: sans-serif;
+     color: tan;
+     font-size: 20px;
+     margin-left: 30px;
+ }

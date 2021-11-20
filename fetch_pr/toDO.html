@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 350px;
+            height: 400px;
+        }
+        .todoList {
+            background-color: aqua;
+            width: 300px;
+        }
+        .deleteTask, .pText {
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="myTodo">
+            <div class="inputVal">
+                 <input class="inputValue" type="text" placeholder="Add your value" value="hello">
+                 <button class="btn">Add</button>
+            </div>
+            <div class="todoListItem">
+
+            </div>
+            <button class="clearTask" onclick="clearTask()">Clear all</button>
+
+        </div>
+    </div>
+    <script>
+         const inpVal = document.getElementsByClassName('inputValue')[0];
+         const addTask  = document.getElementsByClassName('btn')[0];
+
+         addTask.addEventListener('click', ()=> {
+             
+            let localItems = JSON.parse(localStorage.getItem('localItems'));
+            if(localItems === null) {
+                taskList = []
+            } else {
+                taskList = localItems;
+            } 
+            taskList.push(inpVal.value)
+            localStorage.setItem('localItems', JSON.stringify(taskList))
+            showList()
+         })
+          function showList() {
+
+            let outPut = '';
+            let taskList = document.querySelector('.todoListItem');
+            let taskListShow = document.getElementsByClassName('todoListItem');
+            let localItems = JSON.parse(localStorage.getItem('localItems'));
+            if(localItems === null) {
+                taskList = []
+            } else {
+                taskList = localItems;
+            }  
+          
+          taskList.forEach((data, index) => {
+              outPut += `
+              <div class="todoList"> 
+                <p class="pText">movies tonight</p>
+                <button class="deleteTask" onclick="deleteItem(${index})">X</button>
+                </div>
+                `
+          });
+          taskList.innerHTML =  
+        }
+    </script>
+</body>
+</html>

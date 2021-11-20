@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid;
+    margin-top: 25px;
+    margin-left: 150px;
+    width: 1000px;
+    border-radius: 10px;
+    
+}
+.divide {
+    display: flex;
+    flex-direction: column;
+   
+}
+.btns {
+    margin: 10px 10px 10px 32px;
+}
+button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: aqua;
+    border-color: aqua;
+    cursor: pointer;
+}
+img {
+    width: 200px;
+}
+.text {
+    margin-left: 200px;
+    margin-top: 10px;
+}
+.forms {
+    margin-top: 10px;
+   
+}
+.formss {
+    width: 1000px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+.space {
+    width: 1000px;
+    height: 50px; 
+   background-color: blue;
+   margin-left: 150px;
+   border-radius: 10px;
+}
+.h3 {
+    margin: 10px 10px 10px 10px;
+}
+.formss:hover{
+    background-color: yellowgreen;
+    color: white;
+}

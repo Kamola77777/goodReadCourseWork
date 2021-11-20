@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 280px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="input-box">
+            <label for="color">Color name</label>
+            <br>
+            <input id="color" type="text">
+            <br>
+            <br>
+            <label for="hex">Hex code</label>
+            <br>
+            <input id="hex" type="text">
+            <br>
+            <br>
+            <button onclick="add()">Enter</button>
+            <button onclick="del()">Delete</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="color-boxes"></div>
+    </div>
+    <script>
+        const colorBoxes = document.getElementsByClassName('.color-boxes')[0];
+        const color = document.getElementById('color');
+        const hex = document.getElementById('hex');
+        let colorArray = localStorage.getItem('items') ?
+        JSON.parse(localStorage.getItem('items')) : [];
+        
+        colorArray.forEach(divMaker);
+        function divMaker(text) {
+          const div = document.createElement('div');
+          div.className = 'box';
+          div.style.background = text.color_name;
+          div.innerHTML = '<h2>'+text.color_name+'</h2>' + 
+          '<h2>'+text.hex_code+'</h2>';
+          colorBoxes.appendChild(div);
+        }
+        function add() {
+            var color_info = {
+                'color_name' : color.value,
+                'hex_code': hex.value
+            }
+            colorArray.push(color_info);
+            localStorage.setItem('items', JSON.stringify(colorArray));
+            divMaker(colorArray[colorArray.length - 1]);
+            color.value = '';
+            hex.value = '';
+        }
+    </script>
+</body>
+</html>

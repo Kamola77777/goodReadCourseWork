@@ -1,0 +1,147 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    
+    font-size: 10px;
+    line-height: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(199, 175, 188);
+ 
+}
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 12px;
+}
+.text {
+    opacity: 0.8;
+}
+.title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+}
+.container {
+    /* min-height: 100vh; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap; */
+}
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 10px;
+    background: rgb(189, 141, 141);
+    text-align: center;
+}
+.search {
+    margin: 10px;
+}
+.meal-search cite {
+  font-size: 10px;
+}
+.search_box {
+    margin: 20px;
+    display: flex;
+    align-items: stretch;
+}
+.search_control, .search_btn {
+    width: 500px;
+    height: 40px;
+}
+.search_control {
+  padding: 0;
+  font-size: 12px;
+  font-family: inherit;
+  outline: 0;
+  border: 1px solid orange;
+  border-radius: 20px;
+
+}
+.search_control::placeholder  {
+    color: orange;
+}
+.search_btn {
+    width: 55px;
+    height: 55px;
+    font-size: 12px;
+    background: orchid;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 0.4s linear;
+}
+.search_btn:hover {
+    background: burlywood;
+}
+.result {
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: rgb(241, 237, 237);
+}
+/* #item {
+    margin: 20px;
+} */
+.item_item {
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgb(47, 85, 255);
+    background-color: yellowgreen;
+    
+}
+.item_img {
+    width: 300px;
+    display: block;
+}
+.item_name {
+    padding: 10px;
+    margin-left: 140px;
+}
+.item_name h3 {
+    font-size: 20px;
+}
+.item_btn {
+    text-decoration: none;
+    color: hotpink;
+    font-weight: 500;
+    font-size: 16px;
+   padding: 20px;
+   display: block;
+   width: 150px;
+   text-align: center;
+   height: 50px;
+   margin: 10px 10px 10px -20px;
+   border-radius: 20px;
+   background-color: palegoldenrod;
+}
+.item_btn:hover {
+    background: orchid;
+}
+
+.details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(221, 72, 216);
+    border-radius: 10px;
+    color: rgb(109, 47, 47);
+    width: 500px;
+    height: 90%;
+    overflow-y:  scroll;
+    display: none;
+    padding: 20px;
+    border: 1px solid rebeccapurple
+}
+
+.main {
+    position: absolute;
+    top: 100px;
+    left: 400px;
+}

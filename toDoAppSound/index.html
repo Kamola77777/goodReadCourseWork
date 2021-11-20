@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>To-do-list</h1>
+    <div class="add-element">
+        <input type="text" id="add" placeholder="You should add something">
+        <button id="btn" onclick="sound()">Add</button>
+        <audio id="sound">
+          <source src="./sound.wav" type="audio/mpeg">
+        </audio>
+    </div> 
+
+    <div class="element-list">
+        <ul id="list">
+          <li>Buy some books</li>
+          <li>Go back to coding</li>
+          <li>Travelling to somewhere</li>
+        </ul>
+    </div>
+</div>
+ <div class="container-2">
+     <h1>Search</h1>
+     <input onclick="filter()" id="search" type="text" placeholder="Search">
+
+     <ul id="menu">
+       <li><a href="#">Book</a></li>
+       <li><a href="#">cookies</a> </li>
+       <li><a href="#">dcook</a> </li>
+       <li><a href="#">cdsBook</a> </li>
+       <li><a href="#">dBook</a> </li>
+       <li><a href="#">wBook</a> </li>
+       <li><a href="#">fBook</a> </li>
+     </ul>
+ </div>
+    
+
+
+
+    <script src="main.js">
+        audio.play();
+    </script>
+</body>
+</html>
